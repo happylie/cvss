@@ -235,7 +235,7 @@ var CVSS = function (id, options) {
             dd.appendChild(e('small')).innerHTML = this.bm[g][s].d;
         }
     }
-    //f.appendChild(e('hr'));
+    f.appendChild(e('hr'));
     f.appendChild(dl = e('dl'));
     dl.innerHTML = '<dt>Severity&sdot;Score&sdot;Vector</dt>';
     dd = e('dd');
@@ -250,7 +250,7 @@ var CVSS = function (id, options) {
     l.appendChild(this.vector = e('a'));
     this.vector.className = 'vector';
     this.vector.innerHTML = 'CVSS:3.1/AV:_/AC:_/PR:_/UI:_/S:_/C:_/I:_/A:_';
-    
+
     if (options.onsubmit) {
         f.appendChild(e('hr'));
         this.submitButton = f.appendChild(e('input'));

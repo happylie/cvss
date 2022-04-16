@@ -298,3 +298,53 @@
     display: none;
     font-size: x-small;
 }
+
+html, body {
+    background-color: #e0e4e4;
+    font-family: arial;
+    padding: 1em;
+    margin:0;
+    height:100%
+}
+
+#head {
+    width: 100%;
+    height: 25px;
+    color: gray;
+    text-align: center;
+    align-content: center;
+}
+
+#a_side {
+    width: 15%;
+    height: 600px;
+    float: left;
+}
+
+#contents {
+    width: 70%;
+    height: 600px;
+    float: left;
+}
+
+#cvssboard {
+    width:640px;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
+#b_side {
+    width: 15%;
+    height: 600px;
+    float: left;
+}
+
+#footer {
+    color: gray;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    align-content: center;
+    font-size: x-small;
+}
