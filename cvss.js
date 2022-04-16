@@ -235,7 +235,7 @@ var CVSS = function (id, options) {
             dd.appendChild(e('small')).innerHTML = this.bm[g][s].d;
         }
     }
-    //f.appendChild(e('hr'));
+    f.appendChild(e('hr'));
     f.appendChild(dl = e('dl'));
     dl.innerHTML = '<dt>Severity&sdot;Score&sdot;Vector</dt>';
     dd = e('dd');
