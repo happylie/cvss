@@ -19,33 +19,33 @@
 		</div>
 		<br>
 		<div id="a_side">
-			<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-MW8i9OR5r8c5yuyk" data-ad-width="160" data-ad-height="600"></ins>
+			<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-8jeeL8kc7rJTfnzn" data-ad-width="160" data-ad-height="600"></ins>
 		</div>
 		<div id="contents">
 			<div id="cvssboard"></div>
 		</div>
 		<div id="b_side">
-			<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Xpee5Gs084xW6svT" data-ad-width="160" data-ad-height="600"></ins>
+			<ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-ywV2F8ECjRVhsKHw" data-ad-width="160" data-ad-height="600"></ins>
 		</div>
 		<div id="footer">
 			Copyright 2019 © Chandan
 			<br/><a href="https://github.com/cvssjs">CVSSjs</a> is free to use, copy, modification under a BSD like licence.
 			<br/>Common Vulnerability Scoring System (CVSS) is a free and open standard. It is owned and managed by <a href="http://www.first.org/cvss">FIRST.Org</a>.
 			<br/>Korean Description Translation Version by <a href="https://happylie.tistory.com/131">happylie</a>.
-			<br/><br/><ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-Kr80APVpoKTfJWh5" data-ad-width="320" data-ad-height= "100"></ins>
+			<br/><br/><ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-xyLkaGVD1OVoq6PT" data-ad-width="320" data-ad-height= "100"></ins>
 		</div>
 	</body>
-    	<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+	<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 	<script src="cvss.js"></script>
-    	<script>
+	<script type="text/javascript">
 		var c = new CVSS("cvssboard", {
-		    onchange: function() {
+			onchange: function() {
 			window.location.hash = c.get().vector;
 			c.vector.setAttribute('href', '#' + c.get().vector)
-		    }
+			}
 		});
 		if (window.location.hash.substring(1).length > 0) {
-		    c.set(decodeURIComponent(window.location.hash.substring(1)));
+			c.set(decodeURIComponent(window.location.hash.substring(1)));
 		}
 	</script>
 </html>
