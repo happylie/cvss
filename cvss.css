@@ -348,3 +348,9 @@ html, body {
     align-content: center;
     font-size: x-small;
 }
+
+@media screen and (max-width: 900px) {
+    #a_side, #b_side {
+        display:none;
+    }
+}
