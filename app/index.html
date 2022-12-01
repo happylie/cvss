@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="https://happylie.github.io/cvss/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web CVSS Calculator v3.1"/>
+    <title>Web CVSS Calculator v3.1</title>
+    <link rel="icon" sizes="24x24" href="assets/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="assets/cvss/css/cvss.css">
+  </head>
+  <body>
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="index.html" class="d-flex align-items-center text-dark text-decoration-none">
+        <img src="assets/images/favicon.png" width="32" height="32" />
+          <span class="fs-4">&nbsp;Web CVSS Calculator v3.1</span>
+      </a>
+      <input id="search" name="search" type="search" class="form-control" style="width: 390px;"
+             placeholder="CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H" aria-label="Search">
+    </header>
+    <main>
+      <div id="cvssboard" class="text-center"></div>
+      <div id="main_footer" class="text-center" style="font-size:10px;">
+          Copyright 2019 © Chandan
+          <br/><a href="https://github.com/cvssjs">CVSSjs</a> is free to use, copy, modification under a BSD like licence.
+          <br/>Common Vulnerability Scoring System (CVSS) is a free and open standard. It is owned and managed by <a href="http://www.first.org/cvss">FIRST.Org</a>.
+          <br/>Korean Description Translation Version by <a href="https://happylie.tistory.com/131">happylie</a>.
+      </div>
+    </main>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    </footer>
+  </div>
+  <script type="text/javascript" src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="assets/cvss/js/cvss_kr.js"></script>
+  <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  <script>
+      var c = new CVSS("cvssboard", {
+          onchange: function() {
+              window.location.hash = c.get().vector;
+              c.vector.setAttribute('href', '#' + c.get().vector)
+          }
+      });
+      if (window.location.hash.substring(1).length > 0) {
+          c.set(decodeURIComponent(window.location.hash.substring(1)));
+      }
+      var e = document.getElementById('search')
+      e.addEventListener('keypress', function (event) {
+        var d = "index.html#"+String(document.getElementById('search').value);
+        document.location.href = d
+        document.location.reload()
+      })
+  </script>
+  </body>
+</html>
